@@ -1,0 +1,123 @@
+/* Estilos generales para el cuerpo y títulos */
+body {
+font-family: 'Poppins', sans-serif; /* Asumiendo que Poppins está importado en algún lugar o se usará una fuente por defecto */
+ background-color: #fef8f0; /* Color de fondo ligero */
+}
+.section-title {
+font-family: 'Playfair Display', serif; /* Asumiendo que Playfair Display está importado */
+ font-size: 2.8rem;
+ margin-bottom: 2.5rem;
+ color: #92400C; /* Marrón oscuro para títulos principales */
+ text-align: center;
+}
+.category-title {
+ font-family: 'Playfair Display', serif;
+ font-size: 2.2rem;
+ color: #4A2B0E; /* Marrón más oscuro para categorías */
+ text-align: center;
+ position: relative;
+ padding-bottom: 10px;
+ margin-top: 3.5rem;
+ margin-bottom: 2.5rem;
+}
+.category-title::after {
+ content: '';
+ position: absolute;
+ left: 50%;
+ bottom: 0;
+ transform: translateX(-50%);
+ width: 80px;
+ height: 4px;
+ background-color: #E6B026; /* Amarillo dorado */
+ border-radius: 2px;
+}
+
+/* Estilos para las tarjetas de menú */
+.card {
+ border: none;
+ border-radius: 12px;
+ overflow: hidden;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ background-color: #fff;
+ text-align: center;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.card:hover {
+ transform: translateY(-8px);
+ box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+.card-img-wrapper {
+ height: 200px; /* Altura fija para el área de la imagen */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: #f8f8f8; /* Fondo claro para el contenedor de imagen */
+ border-bottom: 1px solid #eee;
+}
+.card-img-top-custom { /* Clase para la imagen dentro del wrapper */
+ max-width: 100%;
+ max-height: 100%;
+ object-fit: contain; /* Ajusta la imagen sin recortar */
+ display: block;
+ margin: auto;
+ border-radius: 12px 12px 0 0; /* Bordes redondeados solo arriba */
+}
+.card-body {
+ padding: 1.5rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ min-height: 180px; /* Asegura una altura mínima para el cuerpo */
+}
+.card-title {
+ font-family: 'Playfair Display', serif;
+ font-size: 1.7rem;
+ color: #4A2B0E;
+ margin-bottom: 0.75rem;
+}
+.card-text {
+ font-size: 0.95rem;
+ color: #666;
+ margin-bottom: 1rem;
+}
+.price-text {
+ font-size: 1.25rem;
+ color: #E6B026; /* Amarillo dorado para el precio */
+ font-weight: 700;
+ margin-top: auto; /* Empuja el precio al fondo de la tarjeta */
+}
+
+/* Estilos de la barra de navegación (copiados del index.html para consistencia) */
+.navbar-brand {
+ font-family: 'Playfair Display', serif;
+ font-size: 2rem;
+ color: #fff;
+}
+.navbar {
+ background-color: #4A2B0E; /* Marrón oscuro para la navbar */
+ box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.navbar-nav .nav-link {
+ color: #fff;
+ margin: 0 10px;
+ font-weight: 500;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+color: #E6B026; /* Amarillo dorado al pasar el ratón o activo */
+}
+
+/* Estilos del footer */
+footer {
+     background-color: #333; /* Color de fondo del footer */ color: #f8f8f8;
+ padding: 30px 0;
+ font-size: 0.9rem;
+}
+.social-icons a {
+ color: #fff;
+ margin: 0 10px;
+ transition: color 0.3s ease;
+}
+.social-icons a:hover {
+ color: #E6B026;
+}
