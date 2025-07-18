@@ -130,6 +130,47 @@ body {
     line-height: 1.6;
 }
 
+/* Carousel Adjustments for Specialties */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #4A2B0E; /* Dark background for visibility */
+    border-radius: 50%; /* Make them round */
+    padding: 1rem; /* Increase size */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Make arrows closer to the edge of the content */
+}
+
+/* Ensure only one row of cards within carousel item */
+.carousel-item .row {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping for horizontal slide effect */
+    justify-content: center; /* Center cards horizontally */
+}
+
+.carousel-item .col-md-6,
+.carousel-item .col-lg-3 {
+    flex-shrink: 0; /* Prevent items from shrinking */
+    width: 100%; /* Default for extra small screens */
+}
+
+/* Responsive adjustments for carousel card visibility */
+@media (min-width: 576px) { /* Small devices (sm) */
+    .carousel-item .col-md-6 {
+        width: 50%; /* Show 2 cards per slide on small-medium screens */
+    }
+}
+
+@media (min-width: 992px) { /* Large devices (lg) */
+    .carousel-item .col-lg-3 {
+        width: 25%; /* Show 4 cards per slide on large screens */
+    }
+}
+
+
 /* Our Story Section */
 .our-story img {
     border-radius: 10px;
@@ -224,6 +265,11 @@ footer .social-icons a:hover {
     .specialties .card-img-top {
         height: 180px; /* Slightly smaller image height on tablets */
     }
+
+    /* Carousel specific responsive adjustments for tablet */
+    .carousel-item .col-md-6.d-none { /* Hide extra cards on tablet */
+        display: none !important;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -254,5 +300,14 @@ footer .social-icons a:hover {
 
     .contact-location p {
         justify-content: center; /* Center icons and text */
+    }
+
+    /* Carousel specific responsive adjustments for mobile */
+    .carousel-item .col-md-6 { /* Ensure 1 card per slide on extra small screens */
+        width: 100%;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%; /* Increase arrow width for easier tapping */
     }
 }
